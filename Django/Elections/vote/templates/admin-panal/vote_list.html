@@ -1,0 +1,25 @@
+{% extends 'admin-panal/index.html' %}
+{% block title %}Vote List{% endblock %}
+{% block content %}
+
+<!-- Modal -->
+    {% for i in id %}
+        <div class="modal fade" id="x_{{ i.electionID }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                Do you want to change mode?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cencel</button>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary" name="submit" value="{{ i.electionID }}">Yes,Change it</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    {{ values|safe }}
+{% endblock %}

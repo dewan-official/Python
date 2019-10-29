@@ -1,0 +1,65 @@
+body{
+	background: url(../../media/developer.jpg) no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+body:before{
+	content: "" ;
+	position: absolute;
+	background: #000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+}
+.centerPosition{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+.centerPosition>a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+}
+.button_custom{
+	display: inline-block;
+	border-radius: 20px;
+	width: 140px;
+	height: 140px;
+	background-color: #FFF;
+	margin: 0px 10px;
+	text-align: center;
+	box-shadow: 1px 1px 20px 5px #000;
+}
+.button_custom>h3{
+	margin: 5px 5px;
+	font-size: 18px;
+}
+.modal-content_1{
+	background-color: green;
+}
+.modal-content_2{
+	background-color: red;
+}
+.modal-title{
+	color: #fff;
+}
+.candidate_btn:hover .hover{
+	top:70%;
+	transition: all 1s;
+}
+.hover{
+	position: absolute;
+	top:100%;
+	left: 0;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	background: rgba(0,0,0,0.6);
+}

@@ -1,0 +1,38 @@
+{% extends 'vote/index.html' %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card text-center">
+						<div class="image">
+							<img src="../media/{{ id.userImage }}">
+						</div>
+						<div class="name">{{ id.userName }}</div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="info">
+								<div class="item"><strong>User Name</strong><br>{{ id.userid }}</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="info">
+								<div class="item"><strong>Profile Name</strong><br>{{ id.userName }}</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="info">
+								<div class="item"><strong>Email</strong><br>{{ id.userEmail }}</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

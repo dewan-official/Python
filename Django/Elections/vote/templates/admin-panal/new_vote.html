@@ -1,0 +1,12 @@
+{% extends 'admin-panal/index.html' %}
+{% block title %}Vote Entry{% endblock %}
+{% block content %}
+    <div class="new_user_form col-md-12 bg-light justify-content-center p-4">
+        <form method="post" action=""  id="dynamic_form" class="col-md-6 align-content-center" enctype="multipart/form-data">
+            {% csrf_token %}
+        </form>
+        <input type="number" id="number_candidates" name="number_candidates" placeholder="How many numbers of candidates?" required class="form-control" />
+        <hr>
+          <a href="#" id="add_number" class="btn btn-primary btn-block" >Add Candidate Number</a>
+    </div>
+{% endblock %}

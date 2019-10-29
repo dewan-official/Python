@@ -1,0 +1,29 @@
+.wrapper {
+            padding: 55px 0;
+}
+
+.card {
+    padding: 20px;
+}
+.wrapper .name {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.wrapper .card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.wrapper .info {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 50%;
+    height: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px #e0e0e0;
+}
+
+.wrapper .info .item {
+    margin-top: 55px;
+}

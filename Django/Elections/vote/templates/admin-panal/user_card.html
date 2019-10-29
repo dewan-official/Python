@@ -1,0 +1,56 @@
+{% extends 'admin-panal/index.html' %}
+{% block title %}User List{% endblock %}
+{% block content %}
+{% for User in all_User %}
+<div class="user_card">
+	<div class="user_card_body">
+		<div class="user_info">
+			<div class="static_title">
+				User Information
+			</div>
+			<div class="info_key"></div>
+			<div class="details_body">
+				<table class="table table-borderless">
+					<tr>
+						<td width="71px">ID</td>
+						<td>{{ User.id }}</td>
+					</tr>
+					<tr>
+						<td width="71px" title="Date of Birth">DOB</td>
+						<td>{{ User.userDOB }}</td>
+					</tr>
+					<tr>
+						<td width="71px">Gender</td>
+						<td>{{ User.userGender }}</td>
+					</tr>
+					<tr>
+						<td width="71px">Blood Gro</td>
+						<td>{{ User.userBloodGroup }}</td>
+					</tr>
+					<tr>
+						<td width="71px">Age</td>
+						<td>23 year</td>
+					</tr>
+					<tr>
+						<td width="71px">Address</td>
+						<td>Gorai, Mirzapur, Tangail.</td>
+					</tr>
+					<tr>
+						<td width="71px">Email</td>
+						<td>{{ User.userEmail }}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="r_c">
+			<div class="anglediv">
+				<div class="user_image" style="background-image: url('/media/{{ User.userImage  }}')"></div>
+			</div>
+			<div class="title_div">
+				<h4 class="user_name">{{ User.userName }}</h4>
+			</div>
+		</div>
+	</div>
+</div>
+{% endfor %}
+{% endblock %}
